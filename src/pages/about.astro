@@ -1,0 +1,204 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About ChristKnowledge.com',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About Us"
+    image={{
+      src: '',
+      alt: 'People studying the Bible together',
+    }}
+  >
+    <Fragment slot="title">
+      Grow in faith and knowledge with <br />
+      <span class="text-accent dark:text-white highlight">ChristKnowledge.com</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Welcome to ChristKnowledge.com, where we are dedicated to helping believers deepen their understanding of God's Word and grow in their faith. Our mission is to provide accessible, biblically-sound resources and encouragement for Christians at every stage of their spiritual journey.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Our Ministry Impact"
+    stats={[
+      { title: 'Countries Reached', amount: '150+' },
+      { title: 'Regular Readers', amount: '500K+' },
+      { title: 'Bible Study Resources', amount: '1000+' },
+      { title: 'Testimonies Received', amount: '10K+' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Our Content Areas"
+    subtitle="At ChristKnowledge.com, we offer a wide range of resources to support your spiritual growth and biblical understanding."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Bible Study',
+        description: 'In-depth studies and commentaries on books of the Bible, helping you dive deeper into God\'s Word.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Christian Living',
+        description: 'Practical advice and encouragement for applying biblical principles to everyday life and challenges.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Theology',
+        description: 'Explorations of core Christian doctrines and beliefs to strengthen your faith and understanding.',
+        icon: 'tabler:message-star',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Prayer & Devotionals',
+        description: 'Daily devotionals and prayer guides to help you develop a consistent spiritual practice.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Apologetics',
+        description: 'Resources to help you understand and defend your faith in today\'s challenging world.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Church History',
+        description: 'Learn about the rich history of the Christian faith and the heroes who have gone before us.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Family & Relationships',
+        description: 'Biblical wisdom for building strong, God-centered families and relationships.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Missions & Outreach',
+        description: 'Inspiration and guidance for sharing your faith and serving others in Jesus\' name.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Christian News & Culture',
+        description: 'Stay informed about current events from a Christian perspective and learn to engage with culture biblically.',
+        icon: 'tabler:message-star',
+      },
+    ]}
+    image={{
+      src: '',
+      alt: 'Diverse group of Christians worshipping together',
+    }}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Our Core Values"
+    subtitle="These biblical principles guide everything we do at ChristKnowledge.com"
+    items={[
+      {
+        title: 'Biblical Authority',
+        description: 'We believe in the inerrancy and infallibility of God\'s Word, and strive to align all our content with biblical truth.',
+      },
+      {
+        title: 'Grace and Truth',
+        description: 'We aim to present the gospel and Christian teachings with both uncompromising truth and Christ-like love and grace.',
+      },
+      {
+        title: 'Spiritual Growth',
+        description: 'Our goal is to equip and encourage believers for continual growth in their relationship with Jesus Christ.',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Our Commitment to You"
+    subtitle="As fellow believers in Christ, we are dedicated to serving you with excellence and integrity."
+    isReversed={true}
+    callToAction={{
+      text: 'Start Learning',
+      href: '/blog',
+    }}
+    items={[
+      {
+        title: 'Biblically Sound Teaching',
+        description: 'All our content is carefully reviewed to ensure it aligns with sound doctrine and orthodox Christian beliefs.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Accessible to All',
+        description: 'We strive to make our resources understandable and relevant for believers at every stage of their faith journey.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Continual Improvement',
+        description: 'We are committed to ongoing learning and growth, always seeking to improve our resources to serve you better.',
+        icon: 'tabler:message-star',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Get Involved"
+    tagline="Join Our Community"
+    columns={2}
+    items={[
+      {
+        title: 'Subscribe to Our Newsletter',
+        description: 'Receive weekly devotionals, bible study tips, and updates on new resources directly in your inbox.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Follow Us on Social Media',
+        description: 'Join our online community for daily encouragement, live discussions, and more ways to grow in your faith.',
+        icon: 'tabler:message-star',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Need Prayer or Support?"
+    tagline="We're Here for You"
+    columns={2}
+    items={[
+      {
+        title: 'Submit a Prayer Request',
+        description: 'Share your prayer needs with our team and prayer partners. We consider it a privilege to intercede on your behalf.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Contact Our Care Team',
+        description: 'Have questions about the faith or need spiritual guidance? Our team of trained volunteers is here to help.',
+        icon: 'tabler:message-star',
+      },
+    ]}
+  />
+</Layout>

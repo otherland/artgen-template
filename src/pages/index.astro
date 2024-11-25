@@ -1,0 +1,131 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'ChristKnowledge — Deepening Your Understanding of Christianity',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Learning',
+        href: '/blog',
+        icon: 'tabler:book',
+      },
+      { text: 'About Us', href: '/about' },
+    ]}
+    image={{ src: '~/assets/images/cross-image.jpg', alt: 'ChristKnowledge Hero Image' }}
+  >
+    <Fragment slot="title">
+      Deepen Your <span class="text-accent dark:text-white highlight">Christian Faith</span> Through Knowledge
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">ChristKnowledge</span> is your trusted source for in-depth Christian study and spiritual growth.</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">ChristKnowledge: Grow in faith.</span>
+      Explore Biblical teachings, Christian history, and practical applications for your daily walk with Christ.
+    </Fragment>
+  </Hero>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Recent Articles"
+    information={`Dive into our latest articles to deepen your understanding of Christianity.
+                        Each post offers valuable insights into Scripture, Christian living, and spiritual growth.
+                        Join us in this journey of faith and discovery.
+                `}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Find answers to common questions about Christianity and our blog. If you don't see your question here, feel free to contact us."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'What is the main focus of ChristKnowledge?',
+        description:
+          "ChristKnowledge is dedicated to providing in-depth, biblically-based content to help Christians grow in their faith. We cover a wide range of topics including Bible study, Christian history, theology, and practical application of Christian principles in daily life.",
+      },
+      {
+        title: 'How can I start my journey with Christ?',
+        description:
+          'Starting a journey with Christ begins with acknowledging Him as your Savior and committing to follow His teachings. We recommend reading the Gospels, joining a local church, and spending time in prayer. Our "New Believers" section offers guidance for those beginning their faith journey.',
+      },
+      {
+        title: 'Do you offer Bible study resources?',
+        description:
+          "Yes, we provide various Bible study resources including verse-by-verse commentary, topical studies, and reading plans. Check our 'Resources' section for a comprehensive list of study materials available on our site.",
+      },
+      {
+        title: "How do you ensure the accuracy of your content?",
+        description:
+          "Our content is carefully researched and written by individuals with strong theological backgrounds. We adhere to orthodox Christian doctrine and use reputable sources. However, we always encourage readers to verify information with Scripture, as it is the ultimate authority.",
+      },
+      {
+        title: 'Can I contribute to ChristKnowledge?',
+        description:
+          "We welcome contributions from knowledgeable Christians who align with our statement of faith. If you're interested in writing for us, please visit our 'Write for Us' page for guidelines and submission information.",
+      },
+      {
+        title: 'How can I support the ministry of ChristKnowledge?',
+        description:
+          "Your support is crucial for our ministry. You can help by sharing our content, praying for our team, and if led, making a financial contribution. Visit our 'Support Us' page for more information on how you can partner with us in spreading biblical knowledge.",
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Articles', amount: '732+' },
+      { title: 'Bible Verses Explained', amount: '17,351+' },
+      { title: 'Daily Readers', amount: '11K+' },
+      { title: 'Countries Reached', amount: '150+' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Learning',
+        href: '/articles',
+        icon: 'tabler:book',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Grow in&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Christ Today</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Join thousands of believers deepening their faith through ChristKnowledge. <br class="hidden md:inline" />Start your journey of spiritual growth now!
+    </Fragment>
+  </CallToAction>
+</Layout>
